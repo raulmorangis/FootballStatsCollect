@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.footballstatscollect.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_weight="8"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="2"
+                    android:text="@string/empty"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/Goals"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/YellowCards" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/RedCars" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/Fouls" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/Shots" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/ShotsOnTarget" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/Passes" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/Corners" />
+
+                <TextView
+                    style="@style/ATextStyle"
+                    android:layout_weight="1"
+                    android:text="@string/Injuries" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/NameTeamA"
+                    android:inputType="textCapWords"
+                    style="@style/CTextStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitGoalsTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/goalsTeamA"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitGoalsTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitYellowCardsTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/yellowCardTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitYellowCardsTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitRedCardsTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/redCardsTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitRedCardsTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitFoulsTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/foulsTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitFoulsTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitShotsTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/shotsTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitShotsTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitShotsOnTargetTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/shotsOnTargetTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitShotsOnTargetTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitPassesTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/passesTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitPassesTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitCornersTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/cornersTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitCornersTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitInjuriesTeamA"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/injuriesTeamA"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitInjuriesTeamA"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/NameTeamB"
+                    android:inputType="textCapWords"
+                    style="@style/CTextStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitGoalsTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/goalsTeamB"
+                        style="@style/BTextStyle"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitGoalsTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitYellowCardsTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/yellowCardTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitYellowCardsTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitRedCardsTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/redCardsTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitRedCardsTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitFoulsTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/foulsTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitFoulsTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitShotsTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/shotsTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitShotsTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitShotsOnTargetTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/shotsOnTargetTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitShotsOnTargetTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitPassesTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/passesTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitPassesTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitCornersTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/cornersTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitCornersTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addUnitInjuriesTeamB"
+                        android:text="@string/addUnit" />
+
+                    <TextView
+                        android:id="@+id/injuriesTeamB"
+                        style="@style/BTextStyle" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="restUnitInjuriesTeamB"
+                        android:text="@string/restUnit" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_weight="2"
+            android:onClick="resetMatch"
+            android:paddingBottom="24dp"
+            android:text="Reset" />
+
+    </LinearLayout>
+
+
+</ScrollView>
